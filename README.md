@@ -1,4 +1,4 @@
-# Hospital Management System v2.0
+# Hospital Management System v1.0
 ### Paradise Hospital — Built with Java 11+ & Swing
 
 ---
