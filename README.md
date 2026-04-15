@@ -1,82 +1,127 @@
-# Hospital Management System v1.0
-### Paradise Hospital — Built with Java 11+ & Swing
+# 🏥 Hospital Management System v1.0  
+### Paradise Hospital — Java Swing + OOP Architecture  
+
+
+![Java](https://img.shields.io/badge/Java-11%2B-orange)  
+![GUI](https://img.shields.io/badge/GUI-Swing-blue)  
+![OOP](https://img.shields.io/badge/Concepts-OOP-success)  
+![Status](https://img.shields.io/badge/Project-Completed-brightgreen)  
+![License](https://img.shields.io/badge/License-MIT-lightgrey)  
 
 ---
 
-## Project Structure
+## 📌 Overview  
 
-```
-src/
-├── Main.java                         ← Entry point
-├── model/
-│   ├── PersonDetails.java            ← Abstract base class
-│   ├── Address.java                  ← Immutable value object
-│   ├── Doctor.java                   ← Extends PersonDetails
-│   ├── Nurse.java                    ← Extends PersonDetails
-│   └── Patient.java                  ← Extends PersonDetails
-├── building/
-│   ├── Building.java                 ← Top-level container
-│   ├── Room.java                     ← Contains wards
-│   └── Ward.java                     ← Holds Doctor/Nurse/Patient
-├── service/
-│   ├── HospitalService.java          ← Interface (abstraction layer)
-│   └── ManagementSystem.java         ← Concrete implementation
-├── ui/
-│   └── HospitalGUI.java              ← Full Swing GUI (MVC View)
-└── util/
-    └── Validator.java                ← Input validation utilities
-```
+A **desktop-based Hospital Management System** built with **Java (JDK 11+)** and **Swing GUI**, designed to demonstrate **clean architecture and Object-Oriented Programming (OOP)** principles.  
+
+This system helps manage:  
+- 👨‍⚕️ Doctors  
+- 👩‍⚕️ Nurses  
+- 🧑‍🤝‍🧑 Patients  
+- 🏥 Rooms & Wards  
+- 📅 Appointments  
+Real-time dashboard updates
+---
+
+## ✨ Features  
+
+- 🖥️ Interactive **Swing GUI**
+- 🧱 Clean **modular architecture**
+- 🔄 Real-time dashboard updates  
+- ✅ Input validation system  
+- 📊 Live hospital statistics  
+- 🧩 Strong OOP implementation  
 
 ---
 
-## How to Compile and Run
+## 📸 Screenshots  
 
-### Option 1 — Command Line (from the project root folder)
+> 📌 Add your screenshots inside a `/screenshots` folder in your repo  
+
+### 🏠 Dashboard  
+![Dashboard](screenshots/dashboard.png)
+
+### 👨‍⚕️ Doctor Management  
+![Doctors](screenshots/doctors.png)
+
+### 🏥 Ward View  
+![Wards](screenshots/wards.png)
+
+### 📅 Appointment System  
+![Appointments](screenshots/appointments.png)
+
+---
+
+## 🗂️ Project Structure  
 
 ```bash
-# 1. Compile all sources into the /out directory
-find src -name "*.java" > sources.txt
-javac -d out @sources.txt
-
-# 2. Run
-java -cp out Main
+src/
+├── Main.java                         # Application entry point
+│
+├── model/                            # Core domain models
+│   ├── PersonDetails.java            # Abstract base class
+│   ├── Address.java                  # Immutable value object
+│   ├── Doctor.java                   # Doctor entity
+│   ├── Nurse.java                    # Nurse entity
+│   └── Patient.java                  # Patient entity
+│
+├── building/                         # Hospital infrastructure
+│   ├── Building.java                 # Main container
+│   ├── Room.java                     # Room representation
+│   └── Ward.java                     # Ward management
+│
+├── service/                          # Business logic layer
+│   ├── HospitalService.java          # Interface (abstraction)
+│   └── ManagementSystem.java         # Implementation
+│
+├── ui/                               # Graphical User Interface
+│   └── HospitalGUI.java              # Swing-based UI (MVC View)
+│
+└── util/                             # Utility classes
+    └── Validator.java                # Input validation
 ```
 
-### Option 2 — IntelliJ IDEA (recommended)
-1. File → Open → select this folder
-2. Right-click `src/` → Mark Directory as → Sources Root
-3. Run `Main.java`
+## 🧠 OOP Concepts Used  
 
-### Option 3 — Eclipse
-1. File → New → Java Project
-2. Delete the default `src/` folder
-3. Import this `src/` folder as the source
-4. Run `Main.java`
+- 🔹 **Abstraction** → Interfaces & abstract classes  
+- 🔹 **Encapsulation** → Private fields + validation  
+- 🔹 **Inheritance** → Shared base class (`PersonDetails`)  
+- 🔹 **Polymorphism** → Method overriding  
 
 ---
 
-## OOP Concepts Demonstrated
 
-| Concept       | Where applied |
-|---------------|---------------|
-| Abstraction   | `PersonDetails` (abstract class) + `HospitalService` (interface) |
-| Encapsulation | All fields private; collections returned as unmodifiable views |
-| Inheritance   | `Doctor`, `Nurse`, `Patient` all extend `PersonDetails` |
-| Polymorphism  | `getRole()` overridden in each subclass; `HospitalService` backed by `ManagementSystem` |
+## 🧪 Example Workflow  
+
+1. Setup building (rooms & wards)  
+2. Add doctors and nurses  
+3. Register patients  
+4. Assign wards  
+5. Book appointments  
+6. Monitor dashboard  
+7. Assign staff
+
+---
+🎯 Purpose of the Project
+
+This project was developed as a learning-focused software system to:
+
+Practice OOP concepts in Java
+Build a GUI-based real-world application
+Understand software architecture and design patterns
+Improve problem-solving and coding skills
+
+---
+## 🚀 Future Improvements  
+
+- 🔐 User authentication system  
+- 🗄️ Database integration (MySQL)  
+- 🌐 Web version (Spring Boot + React)  
+- 📈 Advanced analytics dashboard  
 
 ---
 
-## Sample Walkthrough
+## 👨‍💻 Author-> MD Sakib Hasan CSE KU  
 
-1. Launch the app → click **Building & Wards → Setup Building** → 3 rooms, 4 wards
-2. **Doctors → Add Doctor** → ID: D001, Name: Dr. Ahmed, capacity: 5
-3. **Nurses → Add Nurse** → ID: N001, Name: Nurse Farzana, capacity: 3
-4. **Patients → Add Patient** → ID: P001, Name: Karim Hossain, Ward: 1
-5. **Appointments → Book Appointment** → D001 + P001
-6. **Building → Assign Doctor** → Room 1, Ward 1, ID: D001
-7. **Building → Refresh View** → see full ward layout
-8. **Dashboard** → all counts update automatically every 1.5s
-
----
-
-*Built as a professional OOP demonstration project.*
+**Paradise Hospital Project**  
+Built for learning **Java, GUI, and OOP concepts**  
