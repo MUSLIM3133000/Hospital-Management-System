@@ -39,16 +39,20 @@ Real-time dashboard updates
 > 📌 Add your screenshots inside a `/screenshots` folder in your repo  
 
 ### 🏠 Dashboard  
-![Dashboard](screenshots/dashboard.png)
+<img width="1906" height="1027" alt="Screenshot 2026-04-13 170420" src="https://github.com/user-attachments/assets/ac73f2cd-f3d8-46af-a3ca-843bdbd9d116" />
 
 ### 👨‍⚕️ Doctor Management  
-![Doctors](screenshots/doctors.png)
+<img width="1917" height="1029" alt="Screenshot 2026-04-15 071700" src="https://github.com/user-attachments/assets/926bd937-7be2-405b-ae74-64772afb6127" />
+### Nurse Management
+<img width="1916" height="1028" alt="Screenshot 2026-04-15 071718" src="https://github.com/user-attachments/assets/0ccaa4cc-9005-4567-ad7a-475b129adbad" />
+### Patient Management
+<img width="1919" height="1016" alt="Screenshot 2026-04-15 071743" src="https://github.com/user-attachments/assets/56dc91c9-cf11-4812-8351-1c5f40817d82" />
 
-### 🏥 Ward View  
-![Wards](screenshots/wards.png)
-
+### 🏥 Ward View
+<img width="1919" height="1022" alt="Screenshot 2026-04-15 071817" src="https://github.com/user-attachments/assets/c8e899c5-d532-4ca4-b7d7-9c55af3f1a5f" />
 ### 📅 Appointment System  
-![Appointments](screenshots/appointments.png)
+<img width="1919" height="1020" alt="Screenshot 2026-04-15 071800" src="https://github.com/user-attachments/assets/966f22b7-3d71-4809-bb9c-592e363b9dba" />
+
 
 ---
 
